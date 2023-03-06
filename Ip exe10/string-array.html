@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Низ като масив от знаци</title>
+</head>
+<body>
+    <input type="text" name="" id="text" placeholder="Input text...">
+    <button onclick="printText()">Show</button>
+    <p id="info"></p>
+
+    <script>
+
+        function getText(){
+            return document.getElementById("text").value;
+        }
+
+        function printText(){
+            let string = getText();
+
+            let textArray = Array.from(string);
+
+            console.log(textArray);
+
+            for(const textElement of textArray){
+                document.getElementById("info").innerHTML += textElement + "<br>"
+            }
+        }
+    </script>
+</body>
+</html>

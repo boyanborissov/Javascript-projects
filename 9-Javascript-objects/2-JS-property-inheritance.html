@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property inheritance</title>
+</head>
+<body>
+    <script>
+    let extra = new Object();
+    extra.hp = "180h.p";
+    extra.tip = "4x4";
+    extra.doors = "5 doors";
+    extra.color = "blue metalic";
+    extra.seats = "4 seats";
+
+    let car = new Object();
+    car.make = "Saab";
+    car.model = "9-3";
+    car.year = "2008";
+    car.extri = extra;
+
+    alert(`${car.make} ${car.model} ${car.year} ${car.extri.hp} ${car.extri.color} ${car.extri.doors}`);
+    console.log(car);
+</script>
+</body>
+</html>

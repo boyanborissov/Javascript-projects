@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style div with JS</title>
+    <style>
+        .box{
+            width: 300px;
+            height: 200px;
+            border: 2px solid black;
+            margin: 20px 0;
+            background-color: chartreuse;
+            transition: all 0.5s linear;
+        }
+    </style>
+</head>
+<body>
+    <h2>Style div with JS </h2>
+    <label for="selectColor">Choose color:</label>
+    <input type="color" name="selectColor" id="selectColor"><br><br>
+    <button type="button" onclick="changeDiv('50px')">Change height and width</button>
+    <button type="button" onclick="changeBgr()">Change Bgr</button>
+    <div class="box"></div>
+
+    <script>
+        function changeDiv(x){
+            document.getElementsByClassName("box")[0].style.width=x;
+            document.getElementsByClassName("box")[0].style.height=x;
+        }
+        function changeBgr(){
+            let Color = document.getElementById("selectColor").value;
+        document.getElementsByTagName("body")[0].style.background=Color;
+
+        }
+    </script>
+</body>
+</html>

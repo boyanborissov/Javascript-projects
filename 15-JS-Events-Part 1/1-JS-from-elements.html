@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page</title>
+</head>
+<body>
+    <form action="submit.html">
+    User:<input type="text" name="user"><br>
+    Pasword:<input type="password" name="password"><br>
+    Submit: <button type="submit">Entry</button>
+    </form>
+    <script>
+       const form = document.querySelector('form');
+        console.log(form.elements[0].type);
+        console.log(form.elements[0].name);
+        console.log(form.elements.password.type);
+        console.log(form.elements.password.name);
+    </script>
+
+
+</body>
+</html>

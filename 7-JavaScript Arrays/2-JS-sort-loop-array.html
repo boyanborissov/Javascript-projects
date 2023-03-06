@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sort loop array</title>
+</head>
+<body>
+    <h2>Students</h2>
+    <div id="text"></div>
+
+    <script>
+        const students = ["Miteee","Dimieee","Christian","Milko","Qnko"];
+        let text, i, aLen;
+
+        aLen = students.length;
+
+        students.sort();
+
+        text = `<ol>`;
+        for(let x of students){
+            text += `<li>${x}</li>`;
+        }
+        text += `</ol>`
+
+        document.getElementById("text").innerHTML = text;
+    </script>
+</body>
+</html>

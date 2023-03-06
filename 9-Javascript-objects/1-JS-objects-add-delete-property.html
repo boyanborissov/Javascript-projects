@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects add and delete property</title>
+</head>
+<body>
+    <script>
+        let cup = new Object();
+
+        cup.material = "Ceramic";
+        cup.color = "white";
+        cup.ornament = "yes";
+        cup.price = "10.50";
+
+        delete cup.ornament;
+
+        if(cup.hasOwnProperty("ornament")){
+            alert("Material: " + cup.material + "\nColor: " + cup.color + "\nDecoration: " + cup.ornament + "\nPrice: " + cup.price + " lv");
+        
+        }else{
+            alert("Material: " + cup.material + "\nColor: " + cup.color + "\nPrice: " + cup.price + " lv");
+
+        }
+        // if(cup.hasOwnProperty("ornament")){
+        //     alert(`Material: ${cup.material}\nColor: ${cup.color} \nDecoration: ${cup.ornament} \nPrice: ${cup.pricelv}`);
+        
+        // }else{
+        //     alert(`Material: ${cup.material}\nColor: ${cup.color} \nPrice: ${cup.pricelv}`);
+
+        // }
+
+
+    </script>
+</body>
+</html>

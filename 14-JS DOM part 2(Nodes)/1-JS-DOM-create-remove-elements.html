@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create and remove elements JS DOM</title>
+</head>
+<body>
+<button onclick="addElement()">Add</button>
+<button onclick="removeElement(0)">Remove</button>
+<div class="info">
+    <p>This is the first paragraph</p>
+    <p>This is the second paragraph</p>
+</div>
+    <script>
+        function addElement(){
+            const p = document.createElement("p");
+            const node = document.createTextNode("This is a new paragraph.");
+            p.appendChild(node);
+            const element = document.querySelectorAll(".info")[0];
+            element.appendChild(p);
+        }
+            function removeElement(index){
+                const element = document.querySelectorAll(".info p");
+                if(index >= 0 && index < element.length){
+                    element[index].remove();
+                }
+                else {
+                alert("Unable to remove item! The index must be between 0 and " + index + ".")
+            }
+        }
+        
+
+    </script>
+</body>
+</html>

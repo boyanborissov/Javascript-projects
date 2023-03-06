@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Стилизиране на заглавието с JS</h2>
+
+    <button type="button" onclick="changer()">Натисни</button>
+    <script>
+        function changer(){
+            let heading =  document.getElementsByTagName('h2')[0];
+            heading.style.backgroundColor="#000";
+            heading.style.color = "red";
+            document.getElementsByTagName('h2')[0].style.color = 'red';
+            document.style.color = 'blue';
+        }
+    </script>
+</body>
+</html>

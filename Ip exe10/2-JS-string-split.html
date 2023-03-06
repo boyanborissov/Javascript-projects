@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Разделяне низ на думи</title>
+</head>
+<body>
+  <script>
+    var str1 = "1 2 3 4 5";
+    var razd1 = str1.split(" ");
+
+    var str2 = "Променливи,Операции,Конструкции,Масиви,Функции";
+    var razd2 = str2.split(",");
+
+    var text = "Съдържание: <br><br>";
+
+    for (var i = 0; i < razd1.length; i++) {
+      text += "Глава " + razd1[i] + ": " + razd2[i] + "<br>";
+    }
+
+    document.write(text);
+  </script>
+</body>
+</html> 

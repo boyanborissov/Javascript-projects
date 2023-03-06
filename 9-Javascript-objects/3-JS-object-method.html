@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object method</title>
+</head>
+<body>
+    <p id="info"></p>
+
+    <script>
+        var candidateStudent = {
+            firstname: "Mitee",
+            lastname:"Stef",
+            math:5.78,
+            exam:5.14,
+            calcScore : function(str){
+                let score = this.math + 2*this.exam;
+                return str + score.toFixed(2);
+            }
+        };
+        document.getElementById("info").innerHTML = "My name is" + candidateStudent.firstname + candidateStudent.lastname +  " - " +  candidateStudent.calcScore("бал ");
+
+        console.log(candidateStudent)
+    </script>
+</body>
+</html>

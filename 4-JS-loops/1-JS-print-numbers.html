@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Print numbers in range</title>
+</head>
+<body>
+    <button onclick="printNumbers(1,11)">Show</button>
+    <p id="info"></p>
+    <script>
+    function printNumbers(arg1,arg2){
+        var text = "";
+        if( arg1 > arg2){
+            let t = arg2;
+            arg2 = arg1;
+            arg1 = t;
+        }
+        var i = arg1;
+        do{
+            text+="<br>The number is: " + i;
+            i++;
+        }while(i < arg2);
+        document.getElementById("info").innerHTML = text;
+    }
+    </script>
+</body>
+</html>

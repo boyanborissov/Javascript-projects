@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Choose color:
+    <input type="radio" name="color" value="blue"> Blue
+    <input type="radio" name="color" value="green"> Green
+    <input type="radio" name="color" value="violet"> Violet
+
+    <script>
+        const buttons = document.getElementsByName('color');
+        function setColor(event){
+            document.body.style.background = event.target.value;
+        }
+        for (let i = 0; i < buttons.length; i++)
+            buttons[i].addEventListener('change', setColor);
+    </script>
+</body>
+</html>

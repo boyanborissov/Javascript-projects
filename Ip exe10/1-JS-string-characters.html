@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Знакове в низ</title>
+</head>
+<body>
+  <script>
+    var str = "Това е низ.",
+        str_new = "";
+
+    var z1 = "Първият знак в низа е : " + str.charAt(0);
+    var z2 = "Последният знак в низа е : " + str.charAt(str.length - 1);
+
+    for (var i = 0; i < str.length; i++) {
+        if (str.charAt(i) !== "e") {
+          str_new += str.charAt(i);
+        } else {
+          str_new += "E";
+        }
+    }
+
+    var rez = "Новият низ е : " + str_new + "\n";
+    alert(rez + z1 + "\n" + z2);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array of objects of people</title>
+</head>
+<body>
+    <script>
+        let people = {
+        toni: {
+            name: 'Toni',
+            age: 69,
+            gender: 'male'
+        },
+        vini: {
+            name: 'Vini',
+            age: 66,
+            gender: 'male'
+        }
+        };
+
+        console.log('Print first variant: ' + people.toni.name);
+        console.log('Print second variant: ' + people.vini['age']);
+
+        delete people.vini;
+
+        for(var key in people){
+            console.log(people[key]);
+        }
+    </script>
+</body>
+</html>

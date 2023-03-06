@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert after element</title>
+</head>
+<body>
+    <button id="btn" onclick="addElementAfter()">Click</button>
+    <ul id="menu">
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+    </ul>
+    <script>
+        function insertAfter(newNode, existingNode){
+            existingNode.parentNode.insertBefore(newNode, existingNode.nextSibling);
+        }
+        function addElementAfter(){
+            const listItems = document.querySelectorAll('ul li');
+            const menu = document.getElementById('menu');
+            const li = document.createElement('li');
+            li.textContent = 'Item ' + (listItems.length + 1);
+            insertAfter(li, menu.lastElementChild);
+
+        }
+    </script>
+</body>
+</html>

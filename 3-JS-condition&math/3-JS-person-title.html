@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function personalTitles(arg1,arg2,arg3){
+            let name = arg1;
+            let age = Number(arg2);
+            let gender = arg3;
+            let title;
+            
+            if(age < 16){
+                if(gender === 'f'){
+                    title="Момичето";
+                }
+                else if(gender === 'm'){
+                    title="Момчето";
+                }
+            }
+            else{
+                if(gender === 'f'){
+                    title="Г-жа";
+                }
+                else if(gender === 'm'){
+                    title="Г-н";
+
+                }
+            }
+            console.log(`${title} ${name} е на ${age} години`);
+        }
+        personalTitles("Митеее",18,'m');
+        personalTitles("Вескоо",17,'f');
+
+    </script>
+</body>
+</html>

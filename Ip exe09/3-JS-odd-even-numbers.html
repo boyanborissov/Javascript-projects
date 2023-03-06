@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript програма за проверка на нечетно или четно число, чрез битова манипулация</title>
+</head>
+<body>
+    <script>
+    const check_even_odd = (n) => {
+        if(typeof n != "number"){
+            return "Стойността на параметъра трябва да бъде число!"
+        }
+        if((n ^ 1) == (n + 1))//even
+        return + n + " е четно число"
+        else //odd
+        return + n + " е нечетно число"
+    }
+    console.log(check_even_odd(1))
+    console.log(check_even_odd(4))
+    console.log(check_even_odd(11))
+    console.log(check_even_odd("12"))
+
+    </script>
+</body>
+</html>

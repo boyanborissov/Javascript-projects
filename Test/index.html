@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for='a'>Въведете страна a:</label>
+    <input type='number' id='a'><br><br>
+    <label for='n'>Въведете броя на страните n:</label>
+    <input type='number' id='n'><br><br>
+    <button onclick='findArea()'>Изчисли</button>
+    <button onclick='clearValue()'>Изчисти</button>
+    <p id='result'></p>
+
+    <script>
+         function findArea(){
+            let a = parseFloat(document.getElementById('a').value);
+            let n = parseFloat(document.getElementById('n').value);
+            let R = a/(2*(Math.sin(Math.PI/n)));
+            if( a !== null && a !== '' && a > 0 && n !== null && n !== '' && n > 0){
+            document.getElementById('result').innerHTML = 'Радиуса на многоъгълника е: ' + R.toFixed(2) + '!';
+            }else{
+            document.getElementById('result').innerHTML = 'Грешна стойност!';
+            }
+        }
+        function clearValue(){
+            document.getElementById('a').value = '';
+            document.getElementById('n').value = '';
+            document.getElementById('result').innerHTML = '';
+        }
+    </script>
+</body>
+</html>

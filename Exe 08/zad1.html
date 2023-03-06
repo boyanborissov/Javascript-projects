@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript функция за смяна фона</title>
+</head>
+<body>
+    <button onclick="changeBgr()">Промени фона</button>
+    <script>
+        function changeBgr(){
+            let r = Math.floor(Math.random() * 256);
+            let g = Math.floor(Math.random() * 256);
+            let b = Math.floor(Math.random() * 256);
+            let bgnColor = "rgb(" + r + "," + g + "," + b + ")";
+            document.body.style.background = bgnColor;
+            
+        }
+    </script>
+</body>
+</html>

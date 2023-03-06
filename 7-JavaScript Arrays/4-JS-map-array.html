@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map array</title>
+</head>
+<body>
+    <script>
+        var numbers = [4, 16, 25, 49, 64, 121]
+
+        // var squaresRoots = numbers.map(function(number) {
+        //     return (`The square root from ${number} is  ${Math.sqrt(number)}`)
+        // });
+
+        var squaresRoots = numbers.map((number) => 
+            `The square root from ${number} is  ${Math.sqrt(number)}`
+        );
+
+        console.log(numbers);
+        console.log(squaresRoots)
+    </script>
+</body>
+</html>

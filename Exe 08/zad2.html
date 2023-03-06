@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Convert from Fahrenheit to Celsius</h2>
+
+    <input id="Fahrenheit" type="number">
+    <button onclick="toCelsius()">Convert</button>
+    <p>Celsius: <span id="Celsius"></span></p>
+
+    <script>
+
+        function toCelsius(){
+            let f = document.getElementById("Fahrenheit").value
+            var celsius = Math.round((f - 32) * (5/9));
+            return document.getElementById("Celsius").innerHTML = celsius;
+   }
+        
+    </script>
+</body>
+</html>

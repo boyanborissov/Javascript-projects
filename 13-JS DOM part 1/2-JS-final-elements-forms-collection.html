@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final element form in collection</title>
+</head>
+<body>
+    <form id="frm1">
+        First name: <input type="text" name="fname" value="Eva"><br><br>
+        Last name: <input type="text" name="lname" value="Jones"><br><br>
+        <textarea name="message" cols="30" rows="10" placeholder="Type message..."></textarea><br><br>
+        <button type="submit" id="but">Submit</button>
+    </form>
+
+    <script>
+        document.getElementById('but').onclick = function(){
+            const x = document.forms['frm1'];
+            let text = '';
+            for(let i = 0; i < x.length;i++){
+                text += x.elements[i].value + ' ';
+            }
+            alert(text);
+        }
+    </script>
+</body>
+</html>

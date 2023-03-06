@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Length</title>
+</head>
+<body>
+    
+    <h2>Javascript arrays</h2>
+    <p id="text-array"></p>
+    <p>The number of cities are <span id="text-length"></span>.</p>
+
+    <script>
+        let cities = ["Plovdiv", "Varna", "Sofia", "Lom"]
+
+        document.getElementById("text-array").innerHTML = cities[0];
+        document.getElementById("text-array").innerHTML += "," +cities[cities.length-1];
+
+        document.getElementById("text-length").innerHTML = cities.length;
+
+    </script>
+</body>
+</html>

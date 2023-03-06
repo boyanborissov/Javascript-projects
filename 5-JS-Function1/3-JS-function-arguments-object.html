@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum numbers with arguments object</title>
+</head>
+<body>
+    <p>The sum of all <span id="result"></span>.</p>
+
+    <script>
+        function sumAllNumbers(){
+            let sum = 0;
+            for(let i = 0; i < arguments.length; i++){
+                sum += arguments[i];
+            }
+            return arguments.length + " numbers is " + sum;
+        }
+        document.getElementById("result").innerHTML = sumAllNumbers(20,11,145,99);
+    </script>
+</body>
+</html>

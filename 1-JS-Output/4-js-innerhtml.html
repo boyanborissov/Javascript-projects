@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Извеждане със свойство Inner и подобни такива</title>
+</head>
+<body>
+    <h1>Inner</h1>
+    <p id="demo0">Решението е: </p>
+    <p id="demo12"><mark>Hello guys!</mark></p>
+    <p id="demo1">Dimiie,Christian Boy and Milkoo. </p>
+    <p id="demo2">Сега е 13.00. </p>
+    <p id="dimie">Miteeee = </p>
+    <p id="vesko">Сега го решавам. </p>
+
+    <script>
+        let calc = document.getElementById("demo12").textContent;
+        
+        document.getElementById("demo2").innerHTML = calc +  "Сумата е " + "<em>"
+             + (20 + 169) + "</em>";
+             
+        
+
+        document.getElementById("demo1").textContent += "Сумата е " + "<em>"
+             + (20 + 169) + "</em>";
+
+        document.getElementById("demo1").textContent = calc + "Сумата е " + "<em>"
+             + (60 + 169) + "</em>";
+             
+         document.getElementById("dimie").innerText = calc + "Сумата е " + "<em>"
+             + (20 + 169) + "</em>";
+
+        document.getElementById("vesko").innerHTML +=calc;
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Търсене в низ</title>
+</head>
+<body>
+    <script>
+
+        var str = "18102@uktc-bg.com"
+
+        var znak1 = str.indexOf("@");
+        var znak2 = str.indexOf(".");
+        var znak3 = str.indexOf("~");
+
+        var val = ((znak1 !== -1) && (znak2 !== -1)) ? "valid" : "not valid";
+
+        var rez = "Format is " + val;
+        rez += "\n Symbol @ is on position " + znak1;
+        rez += "\n Symbol . is on position " + znak2;
+        rez += "\n Symbol ~ is on position " + znak3;
+
+        alert(rez)
+
+
+    </script>
+</body>
+</html>

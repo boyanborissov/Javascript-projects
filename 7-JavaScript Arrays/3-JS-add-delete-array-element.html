@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add or delete array length</title>
+</head>
+<body>
+    <h2>Array of numbers</h2>
+    <p id="text"></p>
+    <button onclick="addFirstEl()">Add front</button>
+    <button onclick="addLastEl()">Add back</button>
+    <button onclick="delFirstEl()">Delete front</button>
+    <button onclick="delLastEl()">Delete back</button><br><br>
+    Input element number:<input type="number" id="n" style="width: 40px;">
+    <button onclick="delEl()">Delete</button>
+
+    <script>
+        let numbers = new Array(1, 2, 3, 4, 5);
+        showArray();
+
+        function showArray(){
+            document.getElementById("text").innerHTML = numbers.join(" | ");
+        }
+
+        function addFirstEl(){
+            numbers.unshift(numbers[0] - 1);
+            showArray();
+        }
+        function addLastEl(){
+            numbers.push(numbers[numbers.length - 1] + 1    );
+            showArray();
+        }
+        function delFirstEl(){
+            numbers.shift();
+            showArray();
+        }
+        function delLastEl(){
+            numbers.pop();
+            showArray();
+        }
+        function delEl(){
+            let index = parseInt(document.getElementById("n").value);
+            numbers.splice((index-1), 1)
+            showArray();
+        }
+    </script>
+
+</body>
+</html>

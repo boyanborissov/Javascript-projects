@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array of objects methods</title>
+</head>
+<body>
+    <script>
+        const items = [
+        { name: 'Laptop', price: 600 },
+        { name: 'Monitor', price: 400 },
+        { name: 'SSD', price: 300 },
+        { name: 'HardDisk', price: 200 },
+        { name: 'Mouse', price: 50 },
+        { name: 'Keyboard', price: 100 }
+    ];
+        const filteredItems = items.filter((item) => {
+            return item.price < 300;
+        });
+        console.log(filteredItems);
+
+        const itemNames = items.map((item) =>{
+        return item.name;
+        });
+        console.log(itemNames);
+
+        const foundItem = items.find((item) => {
+            return item.name === 'Mouse';
+        });
+        console.log(foundItem);
+
+
+        const hasInexpensiveItems = items.some((item) => {
+            return item.price <= 200;
+        });
+        console.log(hasInexpensiveItems);
+
+        const hasntInexpensiveItems = items.every((item) => {
+            return item.price <= 300;
+        });
+        console.log(hasntInexpensiveItems);
+
+        const total = items.reduce((currentTotal , item) => {
+            return item.price + currentTotal;
+        }, 0);
+        console.log(total);
+
+
+
+
+    </script>
+</body>
+</html>

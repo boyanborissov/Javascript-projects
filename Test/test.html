@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS array of objects</title>
+</head>
+<body>
+    <script>
+        let students = [
+            { Anatomy: 6.00, Physiology: 5.30, Biochemistry: 6.00 },
+            { Anatomy: 3.00, Physiology: 2.30, Biochemistry: 4.00 },
+            { Anatomy: 6.00, Physiology: 6.00, Biochemistry: 6.00 },
+            { Anatomy: 3.00, Physiology: 3.30, Biochemistry: 3.00 },
+            { Anatomy: 2.00, Physiology: 2.30, Biochemistry: 2.00 },
+            { Anatomy: 5.70, Physiology: 5.80, Biochemistry: 6.00 },
+
+        ];
+
+        for(var key in students){
+            console.log((students[key].Anatomy + students[key].Physiology + students[key].Biochemistry)/3);
+        }
+
+        const filteredItems = students.filter((item) => {
+            return item.Anatomy === 2.00;
+        });
+        console.log(filteredItems);
+
+        const corrective = students.some((item) => {
+        return (item.Anatomy < 4.00 && item.Physiology < 4.00 && item.Biochemistry < 4.00)
+         });
+          if(corrective){
+            console.log("Има за поправителен");
+          }
+       console.log(corrective)
+    </script>
+</body>
+</html>

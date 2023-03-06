@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript програма за измерване на времето, необходимо на дадена функция за изпълнение</title>
+</head>
+<body>
+    <script>
+        const time_taken = callback => {
+            const result = callback();
+            return result;
+        };
+        console.log("Необходимо време: " + time_taken(() => Math.pow(2,10)) + "ms");
+        console.log("Необходимо време: " + time_taken(() => Math.sqrt(361)) + "ms");
+        console.log("Необходимо време: " + time_taken(() => Math.sqrt(6 * 6) + (5 * 5)) + "ms");
+
+    </script>
+</body>
+</html>

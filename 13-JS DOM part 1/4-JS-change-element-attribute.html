@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    a.link{
+        text-decoration: none;
+        color: tomato;
+    }
+    a:hover.link{
+        text-decoration: underline;
+    }
+</style>
+<body>
+    <h1>Vesko - 22.02.2023</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis eos qui
+    deleniti perspiciatis sunt velit quae, impedit commodi alias nostrum aliquid
+    aut veniam ut obcaecati id hic earum fuga repellat?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis eos qui
+        deleniti perspiciatis sunt velit quae, impedit commodi alias nostrum aliquid
+        aut veniam ut obcaecati id hic earum fuga repellat?</p>
+
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+    <br><br>
+    <button onclick="myFunction()">Change</button>
+    <script>
+        let pageLinks = document.links;
+
+        function myFunction(){
+            pageLinks.item(1).setAttribute('class','link');
+            document.getElementsByTagName('p').item(0).style.background = "blue";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>JS loops</h2>
+    
+<!--
+    <button onclick="showNumbers()">Show number</button>
+    <button onclick="clearNumbers()">Clear</button>-->
+    <button id= "btn"onclick="onoff()">Numbers</button>
+    <div id="nums"></div>
+    
+    <script>
+        click = 0;
+        function showNumbers(){
+        let text = 0;
+        for (let i = 0; i <= 20; i ++) {
+            text += i;
+        if( i != 20){
+            text += ", ";
+        }
+        }
+        document.getElementById("nums").innerHTML = text;
+    }
+    function showAlphabet(){
+        let text = '';
+        for (let letter = 97; letter <= 122; letter ++) {
+            text += String.fromCharCode(letter);
+        if( letter != 122){
+            text += ", ";
+        }
+        }
+        document.getElementById("nums").innerHTML = text;
+    }
+    function showAlphabetUp(){
+        let text = '';
+        for (let letter = 65; letter <= 90; letter ++) {
+            text += String.fromCharCode(letter);
+        if( letter != 90){
+            text += ", ";
+        }
+        }
+        document.getElementById("nums").innerHTML = text;
+    }
+    function clearNumbers(){
+        document.getElementById("nums").innerHTML = "";
+    }
+    function onoff(){
+        if(click == 0){
+            showNumbers();
+            document.getElementById("btn").innerHTML = "Letters";
+            click=1;
+            //click = 1;
+        }else if(click == 1){
+            showAlphabet();
+            document.getElementById("btn").innerHTML = "LettersUp";
+            click = 2;
+            //click = 2;
+        }else if(click == 2){
+            showAlphabetUp();
+            document.getElementById("btn").innerHTML = "Clear";
+            click = 3;
+            //click = 3;
+        }else if(click == 3){
+            clearNumbers();
+            document.getElementById("btn").innerHTML = "Numbers";
+            click = 0;
+            //click = 0;
+
+}
+    }
+
+        </script>
+</body>
+</html>

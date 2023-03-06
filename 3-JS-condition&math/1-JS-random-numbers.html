@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Generator for random numbers</title>
+</head>
+<body>
+    <script>
+        var number1 = Math.random();
+        var number2 = number1 * 100;
+        var number3 = Math.ceil(number2);
+
+        var str = "Произволно число от 0.0 до 1.0:\n" + number1 + "\n";
+        str += "\nПроизволно число от 0.0 до 100.0:\n" + number2 + "\n";
+        str += "\nПроизволно цяло число:\n" + number3;
+
+        showNumber(str);
+
+        function showNumber(t){
+            alert(t);
+        }
+    </script>
+</body>
+</html>
